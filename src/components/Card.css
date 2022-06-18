@@ -1,0 +1,52 @@
+@media (max-width: 1199px) {
+  .card {
+    margin-bottom: 2.5rem;
+  }
+}
+
+.card {
+  position: relative;
+  display: inline-block;
+  min-width: 320px;
+  min-height: 509px;
+  flex: 0 1 320px;
+  margin-left: 2.5rem;
+  margin-right: 2.5rem;
+}
+
+.borderBack,
+.borderFront,
+.imgCat {
+  position: absolute;
+}
+
+.bottomTextCard {
+  font-family: 'Trebuchet MS';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 15px;
+  text-align: center;
+  color: #fff;
+  background-blend-mode: difference;
+
+  position: absolute;
+  height: 15px;
+  left: 17.34%;
+  right: 17.34%;
+  top: calc(50% - 15px / 2 + 247px);
+}
+
+.bottomTextUrlCard,
+.bottomTextUrlCard:hover {
+  color: #1698d9;
+  text-decoration: none;
+}
+
+.bottomTextUrlUnderlineCard {
+  position: absolute;
+  left: 72.19%;
+  right: 19.06%;
+  top: 99.8%;
+  bottom: 0%;
+}

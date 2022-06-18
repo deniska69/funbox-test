@@ -1,0 +1,9 @@
+const Underline = () => {
+  return (
+    <svg width="28" height="1" viewBox="0 0 28 1" fill="none" xmlns="http://www.w3.org/2000/svg" className="bottomTextUrlUnderlineCard">
+      <path fillRule="evenodd" clipRule="evenodd" d="M3 0H0V1H3V0ZM8 0H5V1H8V0ZM10 0H13V1H10V0ZM18 0H15V1H18V0ZM20 0H23V1H20V0ZM28 0H25V1H28V0Z" fill="#1698D9" />
+    </svg>
+  );
+};
+
+export default Underline;
