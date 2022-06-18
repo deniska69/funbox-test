@@ -36,6 +36,7 @@ body {
   justify-content: center;
 }
 
+/* Надстройка для ie 11 */
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
   body {
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.00005) 49.88%, rgba(0, 0, 0, 0.5) 100%), url(./assets/background_pattern.png);

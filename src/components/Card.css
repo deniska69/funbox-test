@@ -1,9 +1,4 @@
-@media (max-width: 1199px) {
-  .card {
-    margin-bottom: 2.5rem;
-  }
-}
-
+/* Карточка */
 .card {
   position: relative;
   display: inline-block;
@@ -14,41 +9,18 @@
   margin-right: 2.5rem;
 }
 
+/* Внешний отступ для карточек для планшетов */
+@media (max-width: 1199px) {
+  .card {
+    margin-bottom: 2.5rem;
+  }
+}
+
+/* Позиционирование рамок карточк и фотографии кота */
 .borderBack,
 .borderFront,
 .imgCat {
   position: absolute;
-}
-
-.bottomTextCard {
-  font-family: 'Trebuchet MS';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 13px;
-  line-height: 15px;
-  text-align: center;
-  color: #fff;
-  background-blend-mode: difference;
-
-  position: absolute;
-  height: 15px;
-  left: 17.34%;
-  right: 17.34%;
-  top: calc(50% - 15px / 2 + 247px);
-}
-
-.bottomTextUrlCard,
-.bottomTextUrlCard:hover {
-  color: #1698d9;
-  text-decoration: none;
-}
-
-.bottomTextUrlUnderlineCard {
-  position: absolute;
-  left: 72.19%;
-  right: 19.06%;
-  top: 99.8%;
-  bottom: 0%;
 }
 
 /* Сказочное заморское яство*/
@@ -110,4 +82,79 @@
   font-size: 14px;
   line-height: 16px;
   color: #666666;
+}
+
+/* Вес */
+.textCard5 {
+  position: absolute;
+  height: 22px;
+  left: 73.28%;
+  right: 7.97%;
+  top: calc(50% - 22px / 2 + 160.5px);
+  font-family: 'Trebuchet MS';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 42px;
+  line-height: 22px;
+  text-align: center;
+  color: #ffffff;
+}
+
+/* кг */
+.textCard6 {
+  position: absolute;
+  height: 52px;
+  left: 79.53%;
+  right: 14.22%;
+  top: calc(50% + 180px);
+  font-family: 'Trebuchet MS';
+  font-style: normal;
+  font-weight: 100;
+  font-size: 21px;
+  line-height: 22px;
+  text-align: center;
+  color: #ffffff;
+}
+
+/* Чего сидишь? Порадуй котэ */
+.textCard7 {
+  font-family: 'Trebuchet MS';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 15px;
+  text-align: center;
+  color: #fff;
+  background-blend-mode: difference;
+
+  position: absolute;
+  height: 15px;
+  left: 17.34%;
+  right: 17.34%;
+  top: calc(50% - 15px / 2 + 247px);
+}
+
+/* купи */
+.textCard8,
+.textCard8:hover {
+  color: #1698d9;
+  text-decoration: none;
+}
+
+/* Подчёркивание для текста "купи" */
+.svgUnderline {
+  position: absolute;
+  left: 72.19%;
+  right: 19.06%;
+  top: 99.8%;
+  bottom: 0%;
+}
+
+/* Круг */
+.circleCard {
+  position: absolute;
+  left: 70%;
+  right: 5%;
+  top: 75.44%;
+  bottom: 8.84%;
 }

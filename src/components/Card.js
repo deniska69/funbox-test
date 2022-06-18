@@ -1,6 +1,7 @@
 import BorderBack from '../assets/BorderBack';
 import BorderFront from '../assets/BorderFront';
 import Underline from '../assets/Underline';
+import Circle from '../assets/Circle';
 import Cat from '../assets/cat.png';
 import './Card.css';
 
@@ -55,9 +56,12 @@ const Card = props => {
       <div className="textCard2">Нямушка</div>
       <div className="textCard3">{props.taste}</div>
       <TextCard4 countOfServings={props.countOfServings} countOfMouse={props.countOfMouse} />
-      <div className="bottomTextCard">
+      <Circle />
+      <div className="textCard5">{props.weight}</div>
+      <div className="textCard6">кг</div>
+      <div className="textCard7">
         Чего сидишь? Порадуй котэ, {/* eslint-disable-next-line */}
-        <a href="#" className="bottomTextUrlCard">
+        <a href="#" className="textCard8">
           купи.
         </a>
       </div>

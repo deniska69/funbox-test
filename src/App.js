@@ -5,9 +5,9 @@ function App() {
     <div className="content">
       <div className="header">Ты сегодня покормил кота?</div>
       <div className="shopwindow">
-        <Card id={'1'} className="card" taste={'с фуа-гра'} countOfServings={1} countOfMouse={1} />
-        <Card id={'2'} className="card" taste={'с рыбой'} countOfServings={2} countOfMouse={2} />
-        <Card id={'3'} className="card" taste={'с курой'} countOfServings={5} countOfMouse={5} />
+        <Card id={'1'} taste={'с фуа-гра'} countOfServings={10} countOfMouse={1} weight={'0,5'} />
+        <Card id={'2'} taste={'с рыбой'} countOfServings={40} countOfMouse={2} weight={'2'} />
+        <Card id={'3'} taste={'с курой'} countOfServings={100} countOfMouse={5} weight={'5'} />
       </div>
     </div>
   );
