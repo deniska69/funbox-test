@@ -50,3 +50,64 @@
   top: 99.8%;
   bottom: 0%;
 }
+
+/* Сказочное заморское яство*/
+.textCard1 {
+  position: absolute;
+  height: 19px;
+  left: 15.94%;
+  right: 20%;
+  top: calc(50% - 19px / 2 - 224px);
+
+  font-family: 'Trebuchet MS';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+
+  color: #666666;
+}
+
+/* Нямушка */
+.textCard2 {
+  position: absolute;
+  height: 56px;
+  left: 15%;
+  right: 19.06%;
+  top: calc(50% - 56px / 2 - 181.5px);
+  font-family: 'Trebuchet MS';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 56px;
+  color: #000000;
+}
+
+/* Вкус */
+.textCard3 {
+  position: absolute;
+  height: 28px;
+  left: 15.94%;
+  right: 49.06%;
+  top: calc(50% - 28px / 2 - 140.5px);
+  font-family: 'Trebuchet MS';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  color: #000000;
+}
+
+/* Количество порций и мышей */
+.textCard4 {
+  position: absolute;
+  height: 48px;
+  left: 15.94%;
+  right: 44.38%;
+  top: calc(50% - 48px / 2 - 87.5px);
+  font-family: 'Trebuchet MS';
+  font-style: normal;
+  font-size: 14px;
+  line-height: 16px;
+  color: #666666;
+}
