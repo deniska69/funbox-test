@@ -10,12 +10,14 @@ body {
   background: -webkit-linear-gradient(90deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 5e-5) 49.88%, rgba(0, 0, 0, 0.5) 100%), url(./assets/background_pattern.png) repeat fixed; /* Chrome v102, Microsoft Edge v102 */
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
-}
-
 .sample {
   background: -moz-linear-gradient(180deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 5e-5) 49.88%, rgba(0, 0, 0, 0.5) 100%), repeat fixed url(./assets/background_pattern.png); /* FF3.6-15 */
   background: -webkit-linear-gradient(180deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 5e-5) 49.88%, rgba(0, 0, 0, 0.5) 100%), repeat fixed url(./assets/background_pattern.png); /* Chrome10-25,Safari5.1-6 */
   background: linear-gradient(to 180deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 5e-5) 49.88%, rgba(0, 0, 0, 0.5) 100%), repeat fixed url(./assets/background_pattern.png); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  body {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.00005) 49.88%, rgba(0, 0, 0, 0.5) 100%), url(./assets/background_pattern.png);
+  }
 }
