@@ -1,13 +1,21 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  min-width: 100vw;
+  min-height: 100vh;
+
+  background: -webkit-linear-gradient(90deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 5e-5) 49.88%, rgba(0, 0, 0, 0.5) 100%), url(./assets/background_pattern.png) repeat fixed; /* Chrome v102, Microsoft Edge v102 */
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+.sample {
+  background: -moz-linear-gradient(180deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 5e-5) 49.88%, rgba(0, 0, 0, 0.5) 100%), repeat fixed url(./assets/background_pattern.png); /* FF3.6-15 */
+  background: -webkit-linear-gradient(180deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 5e-5) 49.88%, rgba(0, 0, 0, 0.5) 100%), repeat fixed url(./assets/background_pattern.png); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to 180deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 5e-5) 49.88%, rgba(0, 0, 0, 0.5) 100%), repeat fixed url(./assets/background_pattern.png); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 }
