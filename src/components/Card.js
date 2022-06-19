@@ -48,21 +48,23 @@ function TextCard4({ countOfServings, countOfMouse }) {
 const Card = props => {
   return (
     <div id={props.id} className="card">
-      <BorderBack />
-      <img src={Cat} alt="Cat" className="imgCat" />
-      <BorderFront />
-      <Underline />
-      <div className="textCard1">Сказочное заморское яство</div>
-      <div className="textCard2">Нямушка</div>
-      <div className="textCard3">{props.taste}</div>
-      <TextCard4 countOfServings={props.countOfServings} countOfMouse={props.countOfMouse} />
-      <Circle />
-      <div className="textCard5">{props.weight}</div>
-      <div className="textCard6">кг</div>
+      <div className="cardItems">
+        <BorderBack />
+        <img src={Cat} alt="Cat" className="imgCat" />
+        <BorderFront />
+        <div className="textCard1">Сказочное заморское яство</div>
+        <div className="textCard2">Нямушка</div>
+        <div className="textCard3">{props.taste}</div>
+        <TextCard4 countOfServings={props.countOfServings} countOfMouse={props.countOfMouse} />
+        <Circle />
+        <div className="textCard5">{props.weight}</div>
+        <div className="textCard6">кг</div>
+      </div>
       <div className="textCard7">
         Чего сидишь? Порадуй котэ, {/* eslint-disable-next-line */}
-        <a href="#" className="textCard8">
+        <a className="textCard8">
           купи.
+          <Underline />
         </a>
       </div>
     </div>

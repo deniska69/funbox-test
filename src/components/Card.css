@@ -23,6 +23,22 @@
   position: absolute;
 }
 
+/* Цвет заливка  рамок карточки: Default */
+.borderBackFill,
+.borderFrontFill,
+.circleCardFill {
+  fill: #1698d9;
+}
+
+/* Цвет заливка  рамок карточки: Hover */
+.cardItems:hover,
+.cardItems:hover .borderBackFill,
+.cardItems:hover .borderFrontFill,
+.cardItems:hover .circleCardFill {
+  fill: #2ea8e6;
+  cursor: pointer;
+}
+
 /* Сказочное заморское яство*/
 .textCard1 {
   position: absolute;
@@ -135,19 +151,30 @@
 }
 
 /* купи */
-.textCard8,
-.textCard8:hover {
+.textCard8 {
   color: #1698d9;
   text-decoration: none;
+}
+
+.textCard8:hover {
+  color: #2ea8e6;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 /* Подчёркивание для текста "купи" */
 .svgUnderline {
   position: absolute;
-  left: 72.19%;
-  right: 19.06%;
-  top: 99.8%;
+  left: 84%;
   bottom: 0%;
+}
+
+.svgUnderlineFill {
+  fill: #1698d9;
+}
+
+.textCard8:hover .svgUnderlineFill {
+  fill: #2ea8e6;
 }
 
 /* Круг */
