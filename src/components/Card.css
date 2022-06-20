@@ -127,39 +127,29 @@
   text-align: center;
   color: #fff;
   background-blend-mode: difference;
-  display: flex;
   position: absolute;
   height: 15px;
-  left: 17.34%;
-  right: 17.34%;
-  top: calc(50% - 15px / 2 + 247px);
+  display: flex;
+  width: 100%;
+  bottom: 0;
+  justify-content: center;
 }
 
 /* купи */
-.textCard8 {
+.textCard7-2 {
   color: #1698d9;
   text-decoration: none;
   display: inline;
 }
 
-.textCard8:hover {
+.textCard7-2:hover {
   color: #2ea8e6;
   text-decoration: none;
   cursor: pointer;
+  padding-left: 3px;
 }
 
-/* Подчёркивание для текста "купи" */
-.svgUnderline {
-  position: absolute;
-  left: 84%;
-  bottom: 0%;
-}
-
-.svgUnderlineFill {
-  fill: #1698d9;
-}
-
-.textCard8:hover .svgUnderlineFill {
+.textCard7-2:hover .svgUnderlineFill {
   fill: #2ea8e6;
 }
 

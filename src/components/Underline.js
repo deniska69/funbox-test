@@ -1,3 +1,5 @@
+import './Underline.css';
+
 const Underline = () => {
   return (
     <svg width="28" height="1" viewBox="0 0 28 1" fill="none" xmlns="http://www.w3.org/2000/svg" className="svgUnderline">

@@ -1,0 +1,9 @@
+.svgUnderline {
+  position: absolute;
+  left: 72%;
+  bottom: 0%;
+}
+
+.svgUnderlineFill {
+  fill: #1698d9;
+}

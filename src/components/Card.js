@@ -36,7 +36,7 @@ function TextCard4({ countOfServings, countOfMouse }) {
   }
 
   return (
-    <div className={'textCard4'}>
+    <div className="textCard4">
       <strong>{countOfServings}</strong>
       {' ' + text.text1}
       <div>
@@ -49,35 +49,39 @@ function TextCard4({ countOfServings, countOfMouse }) {
 }
 
 const Card = props => {
-  // eslint-disable-next-line
   const [isSelect, setIsSelect] = useState(false);
+  // eslint-disable-next-line
+  const [isEnable, setIsEnable] = useState(props.enable);
 
   function selectCard() {
-    const circle = document.getElementById('circle_' + props.id);
-    const circleClassList = circle.className.baseVal;
+    if (isEnable) {
+      setIsSelect(!isSelect);
+      const circle = document.getElementById('circle_' + props.id);
+      const circleClassList = circle.className.baseVal;
 
-    if (circleClassList.indexOf('circleCardFill_selected') !== -1) {
-      circle.className.baseVal = 'circleCardFill';
-    } else {
-      circle.className.baseVal = 'circleCardFill circleCardFill_selected';
-    }
+      if (circleClassList.indexOf('circleCardFill_selected') !== -1) {
+        circle.className.baseVal = 'circleCardFill';
+      } else {
+        circle.className.baseVal = 'circleCardFill circleCardFill_selected';
+      }
 
-    const borderFront = document.getElementById('borderFront_' + props.id);
-    const borderFrontClassList = borderFront.className.baseVal;
+      const borderFront = document.getElementById('borderFront_' + props.id);
+      const borderFrontClassList = borderFront.className.baseVal;
 
-    if (borderFrontClassList.indexOf('borderFrontFill_selected') !== -1) {
-      borderFront.className.baseVal = 'borderFrontFill';
-    } else {
-      borderFront.className.baseVal = 'borderFrontFill borderFrontFill_selected';
-    }
+      if (borderFrontClassList.indexOf('borderFrontFill_selected') !== -1) {
+        borderFront.className.baseVal = 'borderFrontFill';
+      } else {
+        borderFront.className.baseVal = 'borderFrontFill borderFrontFill_selected';
+      }
 
-    const borderBack = document.getElementById('borderBack_' + props.id);
-    const borderBackClassList = borderBack.className.baseVal;
+      const borderBack = document.getElementById('borderBack_' + props.id);
+      const borderBackClassList = borderBack.className.baseVal;
 
-    if (borderBackClassList.indexOf('borderBackFill_selected') !== -1) {
-      borderBack.className.baseVal = 'borderBackFill';
-    } else {
-      borderBack.className.baseVal = 'borderBackFill borderBackFill_selected';
+      if (borderBackClassList.indexOf('borderBackFill_selected') !== -1) {
+        borderBack.className.baseVal = 'borderBackFill';
+      } else {
+        borderBack.className.baseVal = 'borderBackFill borderBackFill_selected';
+      }
     }
   }
 
@@ -99,22 +103,25 @@ const Card = props => {
         <div className="textCard5">{props.weight}</div>
         <div className="textCard6">кг</div>
       </div>
-      <div className="textCard7">
-        {props.enable ? (
-          <div>
-            Чего сидишь? Порадуй котэ,{' '}
+
+      <div className="textCard7" id={'text7_' + props.id}>
+        {isEnable && !isSelect && (
+          <>
+            <div className="textCard7-1">Чего сидишь? Порадуй котэ,</div>
             <div
-              className="textCard8"
+              className="textCard7-2"
               onClick={() => {
                 selectCard();
               }}>
-              купи.
+              {' купи.'}
               <Underline />
             </div>
-          </div>
-        ) : (
-          <div className="textCardDisable">{'Печалька, ' + props.taste + ' закончился.'}</div>
+          </>
         )}
+
+        {isEnable && isSelect && props.bottomTextForCardIsSelected}
+
+        {!isEnable && <div className="textCardDisable">{'Печалька, ' + props.taste + ' закончился.'}</div>}
       </div>
     </div>
   );
