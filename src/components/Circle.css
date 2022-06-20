@@ -1,0 +1,27 @@
+.circleCard {
+  position: absolute;
+  left: 70%;
+  right: 5%;
+  top: 75.44%;
+  bottom: 8.84%;
+}
+
+.circleCard:hover {
+  cursor: pointer;
+}
+
+.circleCardFill {
+  fill: #1698d9;
+}
+
+.cardItems:hover .circleCardFill {
+  fill: #2ea8e6;
+}
+
+.circleCardFill_selected {
+  fill: #d91667;
+}
+
+.cardItems:hover .circleCardFill_selected {
+  fill: #e52e7a;
+}

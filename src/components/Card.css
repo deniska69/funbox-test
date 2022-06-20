@@ -8,7 +8,6 @@
   margin-left: 2.5rem;
   margin-right: 2.5rem;
 }
-
 /* Внешний отступ для карточек для планшетов */
 @media (max-width: 1199px) {
   .card {
@@ -16,26 +15,12 @@
   }
 }
 
-/* Позиционирование рамок карточк и фотографии кота */
-.borderBack,
-.borderFront,
+/* Позиционирование фотографии кота */
 .imgCat {
   position: absolute;
 }
 
-/* Цвет заливка  рамок карточки: Default */
-.borderBackFill,
-.borderFrontFill,
-.circleCardFill {
-  fill: #1698d9;
-}
-
-/* Цвет заливка  рамок карточки: Hover */
-.cardItems:hover,
-.cardItems:hover .borderBackFill,
-.cardItems:hover .borderFrontFill,
-.cardItems:hover .circleCardFill {
-  fill: #2ea8e6;
+.imgCat:hover {
   cursor: pointer;
 }
 
@@ -142,7 +127,7 @@
   text-align: center;
   color: #fff;
   background-blend-mode: difference;
-
+  display: flex;
   position: absolute;
   height: 15px;
   left: 17.34%;
@@ -154,6 +139,7 @@
 .textCard8 {
   color: #1698d9;
   text-decoration: none;
+  display: inline;
 }
 
 .textCard8:hover {
@@ -177,11 +163,15 @@
   fill: #2ea8e6;
 }
 
-/* Круг */
-.circleCard {
-  position: absolute;
-  left: 70%;
-  right: 5%;
-  top: 75.44%;
-  bottom: 8.84%;
+.textCard1:hover,
+.textCard2:hover,
+.textCard3:hover,
+.textCard4:hover,
+.textCard5:hover,
+.textCard6:hover {
+  cursor: pointer;
+}
+
+.textCardDisable {
+  color: #ffff66;
 }

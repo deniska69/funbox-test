@@ -1,0 +1,23 @@
+.borderBack {
+  position: absolute;
+}
+
+.borderBack:hover {
+  cursor: pointer;
+}
+
+.borderBackFill {
+  fill: #1698d9;
+}
+
+.cardItems:hover .borderBackFill {
+  fill: #2ea8e6;
+}
+
+.borderBackFill_selected {
+  fill: #d91667;
+}
+
+.cardItems:hover .borderBackFill_selected {
+  fill: #e52e7a;
+}

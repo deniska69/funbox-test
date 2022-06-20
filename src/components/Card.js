@@ -1,8 +1,11 @@
-import BorderBack from '../assets/BorderBack';
-import BorderFront from '../assets/BorderFront';
-import Underline from '../assets/Underline';
-import Circle from '../assets/Circle';
+import { useState } from 'react';
+
+import BorderBack from '../components/BorderBack';
+import BorderFront from '../components/BorderFront';
+import Underline from '../components/Underline';
+import Circle from '../components/Circle';
 import Cat from '../assets/cat.png';
+
 import './Card.css';
 
 function TextCard4({ countOfServings, countOfMouse }) {
@@ -46,26 +49,72 @@ function TextCard4({ countOfServings, countOfMouse }) {
 }
 
 const Card = props => {
+  // eslint-disable-next-line
+  const [isSelect, setIsSelect] = useState(false);
+
+  function selectCard() {
+    const circle = document.getElementById('circle_' + props.id);
+    const circleClassList = circle.className.baseVal;
+
+    if (circleClassList.indexOf('circleCardFill_selected') !== -1) {
+      circle.className.baseVal = 'circleCardFill';
+    } else {
+      circle.className.baseVal = 'circleCardFill circleCardFill_selected';
+    }
+
+    const borderFront = document.getElementById('borderFront_' + props.id);
+    const borderFrontClassList = borderFront.className.baseVal;
+
+    if (borderFrontClassList.indexOf('borderFrontFill_selected') !== -1) {
+      borderFront.className.baseVal = 'borderFrontFill';
+    } else {
+      borderFront.className.baseVal = 'borderFrontFill borderFrontFill_selected';
+    }
+
+    const borderBack = document.getElementById('borderBack_' + props.id);
+    const borderBackClassList = borderBack.className.baseVal;
+
+    if (borderBackClassList.indexOf('borderBackFill_selected') !== -1) {
+      borderBack.className.baseVal = 'borderBackFill';
+    } else {
+      borderBack.className.baseVal = 'borderBackFill borderBackFill_selected';
+    }
+  }
+
   return (
     <div id={props.id} className="card">
-      <div className="cardItems">
-        <BorderBack />
+      <div
+        className="cardItems"
+        onClick={() => {
+          selectCard();
+        }}>
+        <BorderBack id={props.id} />
         <img src={Cat} alt="Cat" className="imgCat" />
-        <BorderFront />
+        <BorderFront id={props.id} />
         <div className="textCard1">Сказочное заморское яство</div>
         <div className="textCard2">Нямушка</div>
         <div className="textCard3">{props.taste}</div>
         <TextCard4 countOfServings={props.countOfServings} countOfMouse={props.countOfMouse} />
-        <Circle />
+        <Circle id={props.id} />
         <div className="textCard5">{props.weight}</div>
         <div className="textCard6">кг</div>
       </div>
       <div className="textCard7">
-        Чего сидишь? Порадуй котэ, {/* eslint-disable-next-line */}
-        <a className="textCard8">
-          купи.
-          <Underline />
-        </a>
+        {props.enable ? (
+          <div>
+            Чего сидишь? Порадуй котэ,{' '}
+            <div
+              className="textCard8"
+              onClick={() => {
+                selectCard();
+              }}>
+              купи.
+              <Underline />
+            </div>
+          </div>
+        ) : (
+          <div className="textCardDisable">{'Печалька, ' + props.taste + ' закончился.'}</div>
+        )}
       </div>
     </div>
   );
